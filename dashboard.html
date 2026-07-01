@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم | Eng. Khaled</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="password-gate" id="passwordGate">
+    <form class="password-box" id="passwordForm">
+      <p class="eyebrow">لوحة التحكم</p>
+      <h1>أدخل كلمة المرور</h1>
+      <label>
+        كلمة المرور
+        <input id="dashboardPassword" type="password" autocomplete="current-password" autofocus>
+      </label>
+      <button class="primary-btn" type="submit">دخول</button>
+      <p class="password-error" id="passwordError" role="alert"></p>
+    </form>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">Eng. Khaled</a>
+    <nav class="nav">
+      <a href="index.html">الموقع</a>
+      <a href="#texts">النصوص</a>
+      <a href="#images">الصور</a>
+      <a href="#lists">القوائم</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="تبديل الوضع">
+      <span class="sun">☀</span>
+      <span class="moon">☾</span>
+    </button>
+  </header>
+
+  <main class="dashboard-page">
+    <section class="dashboard-hero reveal">
+      <p class="eyebrow">لوحة التحكم</p>
+      <h1>تعديل محتوى الموقع</h1>
+      <p class="hero-text">غير النصوص والصور من هنا. التعديلات تحفظ داخل المتصفح وتظهر في الصفحة الرئيسية مباشرة.</p>
+      <div class="hero-actions">
+        <button class="primary-btn" id="saveDashboard" type="button">حفظ التعديلات</button>
+        <button class="ghost-btn" id="resetDashboard" type="button">استرجاع الافتراضي</button>
+      </div>
+      <p class="save-status" id="saveStatus" role="status"></p>
+    </section>
+
+    <form class="dashboard-grid" id="dashboardForm">
+      <section class="dashboard-panel reveal" id="texts">
+        <div class="section-heading">
+          <p>النصوص الأساسية</p>
+          <h2>الهيرو ونبذة عني</h2>
+        </div>
+        <label>الجملة الترحيبية<input name="heroEyebrow" type="text"></label>
+        <label>وصف البداية<textarea name="heroText" rows="4"></textarea></label>
+        <label>عنوان النبذة<input name="aboutTitle" type="text"></label>
+        <label>الاسم في النبذة<input name="aboutName" type="text"></label>
+        <label>نص النبذة<textarea name="aboutText" rows="5"></textarea></label>
+        <label>عنوان التواصل<input name="contactTitle" type="text"></label>
+      </section>
+
+      <section class="dashboard-panel reveal">
+        <div class="section-heading">
+          <p>المشاريع</p>
+          <h2>العناوين والوصف</h2>
+        </div>
+        <label>اسم المشروع الأول<input name="projectTitle1" type="text"></label>
+        <label>وصف المشروع الأول<textarea name="projectText1" rows="3"></textarea></label>
+        <label>اسم المشروع الثاني<input name="projectTitle2" type="text"></label>
+        <label>وصف المشروع الثاني<textarea name="projectText2" rows="3"></textarea></label>
+        <label>اسم المشروع الثالث<input name="projectTitle3" type="text"></label>
+        <label>وصف المشروع الثالث<textarea name="projectText3" rows="3"></textarea></label>
+      </section>
+
+      <section class="dashboard-panel reveal" id="images">
+        <div class="section-heading">
+          <p>الصور</p>
+          <h2>استبدال الصور الوهمية</h2>
+        </div>
+        <label>الصورة الشخصية<input name="profileImage" type="file" accept="image/*"></label>
+        <div class="image-preview" data-preview="profileImage"></div>
+        <label>صورة المشروع الأول<input name="projectImage1" type="file" accept="image/*"></label>
+        <div class="image-preview" data-preview="projectImage1"></div>
+        <label>صورة المشروع الثاني<input name="projectImage2" type="file" accept="image/*"></label>
+        <div class="image-preview" data-preview="projectImage2"></div>
+        <label>صورة المشروع الثالث<input name="projectImage3" type="file" accept="image/*"></label>
+        <div class="image-preview" data-preview="projectImage3"></div>
+      </section>
+
+      <section class="dashboard-panel reveal" id="lists">
+        <div class="section-heading">
+          <p>القوائم</p>
+          <h2>المهارات والأهداف والتواصل</h2>
+        </div>
+        <label>المهارات - كل مهارة في سطر<textarea name="skills" rows="7"></textarea></label>
+        <label>الأهداف - كل هدف في سطر<textarea name="goals" rows="6"></textarea></label>
+        <label>البريد الإلكتروني<input name="email" type="email"></label>
+        <label>رقم الهاتف<input name="phone" type="text"></label>
+        <label>رابط فيسبوك<input name="facebook" type="url"></label>
+        <label>كلمات تأثير الكتابة - كل عبارة في سطر<textarea name="typingPhrases" rows="5"></textarea></label>
+      </section>
+    </form>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
